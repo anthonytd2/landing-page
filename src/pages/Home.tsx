@@ -11,6 +11,7 @@ import "../styles/hero.css";
 import Card from "../components/Card";
 import "../styles/solution.css";
 import "../styles/pricing.css";
+import "../styles/footer.css";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -250,6 +251,80 @@ export default function Home() {
           </form>
         </section>
       </section>
+      {/* NOVA SECTION: FOOTER */}
+      <footer id="footer">
+        <div className="container footer-content">
+          {/* Coluna 1: Logo e Redes Sociais */}
+          <div className="brand-col">
+            <h2 className="logo-text">Solar Locações</h2>
+            <div className="social-links">
+              {/* Usando textos simples para não dar erro de SVG, mas você pode trocar por ícones depois! */}
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">YouTube</a>
+            </div>
+          </div>
+
+          {/* Coluna 2: Empresa */}
+          <div className="links-col">
+            <h3>Empresa</h3>
+            <ul>
+              <li>
+                <a href="#">Sobre nós</a>
+              </li>
+              <li>
+                <a href="#">Faça parte do time</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Coluna 3: Funcionalidades */}
+          <div className="links-col">
+            <h3>Funcionalidades</h3>
+            <ul>
+              <li>
+                <a href="#">Marketing</a>
+              </li>
+              <li>
+                <a href="#">Análise de dados</a>
+              </li>
+              <li>
+                <a href="#">Boot discord</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Coluna 4: Recursos */}
+          <div className="links-col">
+            <h3>Recursos</h3>
+            <ul>
+              <li>
+                <a href="#">IOS & Android</a>
+              </li>
+              <li>
+                <a href="#">Teste a Demo</a>
+              </li>
+              <li>
+                <a href="#">Clientes</a>
+              </li>
+              <li>
+                <a href="#">API</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Barra inferior de Copyright */}
+        <div className="footer-bottom">
+          <p>
+            Feito com amor na aula de Programação Web💙 ©2024 AktieTech - Todos
+            os direitos reservados.
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
