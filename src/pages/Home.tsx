@@ -95,7 +95,7 @@ export default function Home() {
           <div className="desktop-only">
             <ul className="flex gap-1">
               <li>
-                <a href="#">Home</a>
+                <a href="#">Página inicial</a>
               </li>
               <li>
                 <a href="#solution">Soluções</a>
@@ -126,7 +126,7 @@ export default function Home() {
                   <ul>
                     <li>
                       <a onClick={() => setShowMobileMenu(false)} href="#">
-                        Home
+                        Página inicial
                       </a>
                     </li>
                     <li>
