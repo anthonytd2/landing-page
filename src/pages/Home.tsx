@@ -23,7 +23,7 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isChallengeCompleted, setChallengeCompleted] = useState(false);
-  
+
   // Referência do reCAPTCHA necessária para resetar a caixa de seleção
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
@@ -64,7 +64,7 @@ export default function Home() {
       alert("Mensagem enviada com sucesso! Entraremos em contato.");
       setEmail("");
       setMessage("");
-      
+
       // RESET DO COMPONENTE: Volta o reCAPTCHA para o estado desmarcado após o sucesso
       setChallengeCompleted(false);
       recaptchaRef.current?.reset();
@@ -377,8 +377,7 @@ export default function Home() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          
-          {/* O componente reCAPTCHA foi adicionado aqui */}
+
           <div style={{ marginBottom: "1rem" }}>
             <ReCAPTCHA
               ref={recaptchaRef}
