@@ -1,11 +1,12 @@
 #testimonials {
+  background-color: #FF9100; 
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-block: 4rem;
   gap: 3rem;
   overflow: hidden;
-}
+} 
 
 #testimonials header {
   text-align: center;
@@ -44,28 +45,41 @@
 
 .carousel-card {
   background: var(--bg-color);
-  border: 1px solid #e4e4e4;
+  border: 1px solid #000000;
   border-radius: 10px;
   padding: 2.5rem 2rem;
   width: 300px;
   display: flex;
   flex-direction: column;
+  align-items: center; 
   gap: 1.5rem;
   box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 
-.carousel-card > img {
+
+.carousel-card .avatar-initial {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  object-fit: cover;
+  background-color: #FF9100; 
+  color: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .carousel-card .testimony p {
-  color: var(--second-text-color);
+  color: #000000;
   font-size: var(--fs-sm);
   font-style: italic;
   line-height: 1.6;
+}
+
+.carousel-card .testimony {
+  flex-grow: 1;
 }
 
 .carousel-card .rating {
@@ -73,14 +87,18 @@
   gap: 0.25rem;
 }
 
+.carousel-card .names {
+  text-align: center;
+}
+
 .carousel-card .names p:first-child {
   font-weight: var(--fw-bold);
-  color: var(--text-color);
+  color: #000000; 
 }
 
 .carousel-card .names p:last-child {
   font-size: var(--fs-sm);
-  color: var(--second-text-color);
+  color: #000000; 
 }
 
 @media (width >= 1280px) {

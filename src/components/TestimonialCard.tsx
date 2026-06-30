@@ -1,5 +1,4 @@
 interface ITestimonialCardProps {
-  image: string;
   testimony: string;
   rating: number;
   name: string;
@@ -7,7 +6,6 @@ interface ITestimonialCardProps {
 }
 
 export default function TestimonialCard({
-  image,
   testimony,
   rating,
   name,
@@ -24,7 +22,11 @@ export default function TestimonialCard({
 
   return (
     <div className="carousel-card">
-      <img src={image} alt={`Foto de ${name}`} />
+      {/* Aqui entra a lógica que extrai a primeira letra do nome */}
+      <div className="avatar-initial">
+        {name.charAt(0)}
+      </div>
+      
       <span className="testimony">
         <p>"{testimony}"</p>
       </span>

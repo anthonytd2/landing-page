@@ -236,32 +236,28 @@ export default function Home() {
         <section className="carousel">
           <div className="carousel-content">
             <TestimonialCard
-              image="https://api.dicebear.com/7.x/avataaars/svg?seed=Elon"
               testimony="A melhor escolha que fiz para minha empresa. Com a locação cobrando uma taxa fixa por kWh, eu sei exatamente o quanto vou pagar no fim do mês, sem surpresas na fatura!"
               rating={5}
-              name="Elon Ma"
-              role="CEO BING CHILLING"
+              name="Thiago Tomazolli"
+              role="Empresário"
             />
             <TestimonialCard
-              image="https://api.dicebear.com/7.x/avataaars/svg?seed=Ryan"
               testimony="Reduzimos drasticamente a conta de energia da fazenda sem precisar comprar placas solares. O processo foi super rápido e sem burocracia."
               rating={4}
-              name="Ryan Gosling"
+              name="Mauro Silva"
               role="Agrônomo"
             />
             <TestimonialCard
-              image="https://api.dicebear.com/7.x/avataaars/svg?seed=Elon"
-              testimony="A melhor escolha que fiz para minha empresa. Com a locação cobrando uma taxa fixa por kWh, eu sei exatamente o quanto vou pagar no fim do mês, sem surpresas na fatura!"
+              testimony="A economia na conta de luz da propriedade rural foi imediata. Sem precisar descapitalizar para comprar os painéis, consegui direcionar o dinheiro da economia direto para o maquinário da roça. Excelente serviço e suporte!"
               rating={5}
-              name="Elon Ma"
-              role="CEO BING CHILLING"
+              name="Jose Antonio"
+              role="Agricultor"
             />
             <TestimonialCard
-              image="https://api.dicebear.com/7.x/avataaars/svg?seed=Ryan"
-              testimony="Reduzimos drasticamente a conta de energia da fazenda sem precisar comprar placas solares. O processo foi super rápido e sem burocracia."
+              testimony="Sempre quis ter energia solar, mas como o imóvel é alugado, não valia a pena fazer a instalação. Com a assinatura digital da usina, reduzi meus custos fixos sem precisar de obras ou burocracia. Recomendo demais!"
               rating={4}
-              name="Ryan Gosling"
-              role="Agrônomo"
+              name="Valério"
+              role="Pecuarista"
             />
           </div>
         </section>
