@@ -12,11 +12,11 @@
 
 :root {
   --bg-color: #fff;
-  --text-color: #252b42;
-  --second-text-color: #737373;
+  --text-color: #000000;         /* Preto puro para os títulos e links do menu */
+  --second-text-color: #111111;  /* Preto bem escuro para os parágrafos */
   --light-text-color: #fff;
   --light-gray: #f8f8f8;
-  --primary-color: #23a6f0;
+  --primary-color: #0004FF;      /* O seu azul escuro personalizado */
   --secondary-color: #b2e3ff;
 
   --ff-sans: "Montserrat", system-ui, sans-serif;

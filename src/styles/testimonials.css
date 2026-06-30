@@ -1,0 +1,100 @@
+#testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 4rem;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+#testimonials header {
+  text-align: center;
+  max-width: 35rem;
+  padding-inline: 1.5rem;
+}
+
+#testimonials header p.desktop-only {
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.5rem;
+}
+
+#testimonials header > p {
+  color: var(--second-text-color);
+  margin-top: 1rem;
+}
+
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-content {
+  display: flex;
+  gap: 2rem;
+  padding-inline: 2rem;
+  width: max-content;
+}
+
+.carousel-card {
+  background: var(--bg-color);
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+
+.carousel-card > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.carousel-card .testimony p {
+  color: var(--second-text-color);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.carousel-card .rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.carousel-card .names p:first-child {
+  font-weight: var(--fw-bold);
+  color: var(--text-color);
+}
+
+.carousel-card .names p:last-child {
+  font-size: var(--fs-sm);
+  color: var(--second-text-color);
+}
+
+@media (width >= 1280px) {
+  #testimonials {
+    padding-block: 7.5rem;
+  }
+  
+  .carousel-content {
+    justify-content: center;
+    padding-inline: 0;
+    margin: 0 auto;
+  }
+  
+  .carousel-card {
+    width: 350px;
+  }
+}

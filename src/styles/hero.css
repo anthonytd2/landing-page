@@ -5,7 +5,7 @@
   display: flex;
 }
 
-#hero > img {
+#hero>img {
   position: absolute;
   right: 0;
   height: 60%;
@@ -14,6 +14,12 @@
 
 #hero p {
   color: var(--second-text-color);
+  font-size: 1.125rem;
+  /* Aumenta o tamanho da letra (equivale a 18px) */
+  font-weight: 500;
+  /* Deixa a fonte levemente mais encorpada */
+  line-height: 1.6;
+  /* Aumenta o respiro entre as linhas de texto */
 }
 
 #hero .content {
@@ -25,24 +31,24 @@
   gap: 1.75rem;
 }
 
-#hero .content > div {
+#hero .content>div {
   width: fit-content;
   align-self: center;
   margin-bottom: 20%;
 }
 
-@media (width >= 1280px) {
+@media (width >=1280px) {
   #hero {
     background: var(--bg-color);
     border-top: none;
   }
 
-  #hero > span {
+  #hero>span {
     position: absolute;
     top: 0;
   }
 
-  #hero > img {
+  #hero>img {
     top: 0;
     height: 82%;
     padding-left: 55%;
@@ -53,11 +59,11 @@
   }
 
   #hero .content p {
-    width: 80%;
+    width: 45%;
     align-self: center;
   }
 
-  #hero .content > div :first-child {
+  #hero .content>div :first-child {
     width: 10.625rem;
   }
 
