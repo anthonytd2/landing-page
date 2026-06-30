@@ -2,11 +2,12 @@ import Logo from "../assets/logo.svg";
 import "../styles/header.css";
 import "../styles/utility.css";
 import Button from "../components/Button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Close from "../assets/close.svg";
 import Menu from "../assets/hamburguer.svg";
 import HeroRectangleOne from "../assets/rectangleOne.svg";
 import HeroRectangleTwo from "../assets/rectangleTwo.svg";
+import ReCAPTCHA from "react-google-recaptcha";
 import "../styles/hero.css";
 import Card from "../components/Card";
 import TestimonialCard from "../components/TestimonialCard";
@@ -21,9 +22,28 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isChallengeCompleted, setChallengeCompleted] = useState(false);
+  
+  // Referência do reCAPTCHA necessária para resetar a caixa de seleção
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  function handleCompleteChallenge(token: string | null) {
+    if (!token) {
+      setChallengeCompleted(false);
+      return;
+    }
+    setChallengeCompleted(true);
+  }
 
   async function sendContactEmail(e: React.FormEvent) {
     e.preventDefault();
+
+    // TRAVA DE SEGURANÇA: Se o desafio não foi concluído, impede o envio
+    if (!isChallengeCompleted) {
+      alert("Por favor, mude o status do reCAPTCHA marcando a caixa 'Eu não sou um robô'.");
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -44,6 +64,11 @@ export default function Home() {
       alert("Mensagem enviada com sucesso! Entraremos em contato.");
       setEmail("");
       setMessage("");
+      
+      // RESET DO COMPONENTE: Volta o reCAPTCHA para o estado desmarcado após o sucesso
+      setChallengeCompleted(false);
+      recaptchaRef.current?.reset();
+
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
@@ -98,7 +123,7 @@ export default function Home() {
             {showMobileMenu ? (
               <div className="mobile-menu-content">
                 <div className="container flex">
-<ul>
+                  <ul>
                     <li>
                       <a onClick={() => setShowMobileMenu(false)} href="#">
                         Home
@@ -352,6 +377,16 @@ export default function Home() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
+          
+          {/* O componente reCAPTCHA foi adicionado aqui */}
+          <div style={{ marginBottom: "1rem" }}>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6LfXQj4tAAAAAJUrMUjqvBNC47qjAKLJD-gNSuu9"
+              onChange={handleCompleteChallenge}
+            />
+          </div>
+
           <div className="btn-container">
             <button type="submit" className="btn-primary" disabled={isLoading}>
               {isLoading ? "Enviando..." : "Enviar"}
