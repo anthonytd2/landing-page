@@ -136,7 +136,6 @@ export default function Home() {
                         Contato
                       </a>
                     </li>
-                    {/* ADICIONE ESTE BLOCO ABAIXO SEM ALTERAR NADA DO RESTANTE */}
                     <li>
                       <a onClick={() => setShowMobileMenu(false)} href="">
                         Login
@@ -268,8 +267,6 @@ export default function Home() {
         </section>
       </section>
 
-      {/* NOVA SECTION: PREÇOS (Atualizada para faixas de kWh com Taxa Fixa) */}
-      {/* NOVA SECTION: PREÇOS (Com descontos sobre a economia) */}
       <section className="container" id="pricing">
         <header>
           <p className="desktop-only">Planos e preços</p>

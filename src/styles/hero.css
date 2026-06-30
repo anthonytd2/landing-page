@@ -3,13 +3,16 @@
   border-top: 0.125rem solid #e4e4e4;
   height: 90vh;
   display: flex;
+  position: relative; /* Cria a âncora para a imagem não voar para o cabeçalho */
+  overflow-x: hidden; /* Corta qualquer excesso lateral para não gerar barra de rolagem */
 }
-
 #hero>img {
   position: absolute;
+  top: -48px;      
   right: 0;
+  left: 160px;
   height: 60%;
-  padding-left: 30%;
+  width: 85%;   
 }
 
 #hero p {
